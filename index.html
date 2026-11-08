@@ -1,54 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta name="theme-color" content="#ffe6ee"/>
-        <title>boba cafa ~ boba shop simulator</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <main class="wrap">
-            <header>
-                <div class="tag">
-                    <h1>boba cafe 🧋</h1>
-                    <p>mix sweet drinks, make customers smile, and grow ur boba shop!</p>
-                </div>
-            </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffe6ee" />
+    <title>boba cafa ~ boba shop simulator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <div class="tag">
+          <h1>boba cafe 🧋</h1>
+          <p>mix sweet drinks, make customers smile, and grow ur boba shop!</p>
+        </div>
+      </header>
 
-            <section class="stats" aria-label="game statistics">
-                <div class="stat">
-                    <span>coins</span>🪙
-                    <b id="coins">0</b>
-                </div>
-                <div class="stat">
-                    <span>orders served</span>🌷
-                    <b id="served">0</b>
-                </div>
-                <div class="stat">
-                    <span>happy streak</span>✨
-                    <b id="streak">0</b>
-                </div>
-                <div class="stat">
-                    <span>best streak</span>🏆
-                    <b id="best">0</b>
-                </div>
-            </section>
+      <section class="stats" aria-label="game statistics">
+        <div class="stat">
+          <span>coins</span>🪙
+          <b id="coins">0</b>
+        </div>
+        <div class="stat">
+          <span>orders served</span>🌷
+          <b id="served">0</b>
+        </div>
+        <div class="stat">
+          <span>happy streak</span>✨
+          <b id="streak">0</b>
+        </div>
+        <div class="stat">
+          <span>best streak</span>🏆
+          <b id="best">0</b>
+        </div>
+      </section>
 
-            <div class="layout">
-                <section class="panel-customer" aria-labelledby="customer-heading">
-                    <h2 id="customer-heading">at the counter...</h2>
-                    <div class="customer-icon" id="customer" aria-hidden="true">🐰</div>
-                    <div class="speech">
-                        <strong id="customer-name">mochi</strong>
-                        <div class="order" id="order">loading order...</div>
-                        <small>make it just the way i like it please!!♡</small>
-                    </div>
-                    <h2>your drink 🧋</h2>
-                    <div class="cup-area"
-                </section>
+      <div class="layout">
+        <section class="panel-customer" aria-labelledby="customer-heading">
+          <h2 id="customer-heading">at the counter...</h2>
+          <div class="customer-icon" id="customer" aria-hidden="true">🐰</div>
+          <div class="speech">
+            <strong id="customer-name">mochi</strong>
+            <div class="order" id="order">loading order...</div>
+            <small>make it just the way i like it please!!♡</small>
+          </div>
+          <h2>your drink 🧋</h2>
+          <div class="cup-area" aria-label="preview of your drink">
+            <div class="straw"></div>
+            <div class="lid"></div>
+            <div class="cup" id="cup">
+              <div class="logo">♡</div>
+              <div class="pearls" id="pearls"></div>
             </div>
-        </main>
-    </body>
+          </div>
+          <div id="cup-caption" class="cup-caption">
+            choose your ingredients!
+          </div>
+          <span class="pill">right order = 15 coins + streak bonus</span>
+        </section>
+
+        <section class="panel" aria-labelledby="mix-heading">
+          <h2 id="mix-heading">let's make boba! 🍓</h2>
+          <div class="row-title">1. pick your tea</div>
+          <div id="tea-options" class="options"></div>
+          <div class="row-title">2. pick your milk</div>
+          <div id="milk-options" class="options"></div>
+          <div class="row-title">3. pick a topping</div>
+          <div id="topping-options" class="options"></div>
+          <div class="row-title">4. choose the sweetness level</div>
+          <div id="sweetness-options" class="options"></div>
+          <div class="message" id="message" role="status" aria-live="polite">
+            choose all 4 ingredients, and then click serve!
+          </div>
+        </section>
+      </div>
+      <p class="footer">
+        made with love ~ your coins and best streak are saved on this device ~
+        no sign-in required
+      </p>
+    </main>
+  </body>
 </html>
