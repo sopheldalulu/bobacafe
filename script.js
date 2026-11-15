@@ -43,7 +43,8 @@ function loadStats() {
         const x = JSON.parse(localStorage.getItem("bubble-bloom-v1"));
         return {
             coins: Math.max(0, Number(x?.coins) || 0),
-            
+            serve: Math.max(0, Number(x?.served) || 0),
+            best: Math.max(0, Number(x?.best) || 0),
         }
     }
 }
