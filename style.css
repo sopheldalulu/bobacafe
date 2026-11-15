@@ -320,6 +320,66 @@ header p {
   left: 28px;
   background: #fff9;
   clip-path: ellipse(50% 48%);
+  width: 80px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+}
+
+.cup-caption {
+  text-align: center;
+  font-size: 0.86rem;
+  color: #97738b;
+  margin-top: -4px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #947b90;
+  font-size: 0.82rem;
+}
+
+.pill {
+  background: #f8edf9;
+  border: 1px solid #edd7ef;
+  border-radius: 99px;
+  padding: 6px 10px;
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 740px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .wrap {
+    padding: 18px 12px 30px;
+  }
+
+  .stats {
+    gap: 7px;
+  }
+
+  .stat {
+    padding: 10px 13px;
+  }
+  .customer-icon {
+    font-size: 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }
 
 
